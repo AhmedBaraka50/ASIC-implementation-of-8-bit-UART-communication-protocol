@@ -1,0 +1,29 @@
+source /home/synopsys/pts/O-2018.06-SP1/admin/setup/.synopsys_pt.setup
+lappend search_path /home/ICer/saed32nm_lib/ref/DBs
+lappend search_path /home/ICer/Baraka/uart_8bit/rtl/UART_with_FIFO
+lappend search_path /home/ICer/Baraka/uart_8bit/syn
+lappend search_path /home/ICer/Baraka/uart_8bit/pnr
+set SSTF "saed32hvt_ss0p75v125c.db"
+set FFTF "saed32lvt_ff1p16vn40c.db"
+set link_library   [list * $SSTF $FFTF]
+set target_library [list   $SSTF $FFTF]
+set netlist_file "/home/ICer/Baraka/uart_8bit/pnr/uart.v"
+set parasitics_file "/home/ICer/Baraka/uart_8bit/pnr/para.tlup_max_-40.spef"
+set constraints_file "/home/ICer/Baraka/uart_8bit/pnr/uart.tcl"
+set report_default_significant_digits 3 ;
+read_verilog $netlist_file
+current_design uart
+man DES-071
+link
+current_design uart
+read_parasitics $parasitics_file
+source -echo $constraints_file
+set timing_save_pin_arrival_and_slack true
+set power_enable_analysis true
+set power_enable_em_analysis true
+set si_enable_analysis true
+update_timing
+update_power
+update_noise
+man report_analysis_coverage
+save_indesign_session /tmp/.gca_nAnokN 

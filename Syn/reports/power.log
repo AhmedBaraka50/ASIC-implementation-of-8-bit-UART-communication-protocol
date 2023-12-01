@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : uart
+Version: O-2018.06-SP1
+Date   : Tue Nov 28 17:22:40 2023
+****************************************
+
+
+Library(s) Used:
+
+    saed32hvt_ss0p75v125c (File: /home/ICer/saed32nm_lib/ref/DBs/saed32hvt_ss0p75v125c.db)
+    saed32lvt_ff1p16vn40c (File: /home/ICer/saed32nm_lib/ref/DBs/saed32lvt_ff1p16vn40c.db)
+
+
+Operating Conditions: ss0p75v125c   Library: saed32hvt_ss0p75v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+uart                   35000             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_uart_rx_DBIT8_SB_TICK16_0_2
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_1_4
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_uart_tx_DBIT8_SB_TICK16_0_2
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_0_4
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_0_0
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_0_1
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_0_2
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_0_3
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_uart_tx_DBIT8_SB_TICK16_0_0
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_uart_tx_DBIT8_SB_TICK16_0_1
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_1_0
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_1_1
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_1_2
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_fifo_B8_W2_1_3
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_uart_rx_DBIT8_SB_TICK16_0_0
+                       ForQA             saed32hvt_ss0p75v125c
+SNPS_CLOCK_GATE_HIGH_uart_rx_DBIT8_SB_TICK16_0_1
+                       ForQA             saed32hvt_ss0p75v125c
+
+
+Global Operating Voltage = 0.75 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 630.0319 uW  (100%)
+  Net Switching Power  =   1.6318 uW    (0%)
+                         ---------
+Total Dynamic Power    = 631.6636 uW  (100%)
+
+Cell Leakage Power     =   4.1078 mW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      9.2074            0.7332        7.5963e+05           10.7002  (   0.23%)
+register         547.2733            0.2615        1.0375e+09        1.5850e+03  (  33.44%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     73.5512            0.6371        3.0696e+09        3.1438e+03  (  66.33%)
+--------------------------------------------------------------------------------------------------
+Total            630.0319 uW         1.6318 uW     4.1078e+09 pW     4.7395e+03 uW
+1

@@ -1,0 +1,50 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : uart
+Version: O-2018.06-SP1
+Date   : Tue Nov 28 17:22:32 2023
+****************************************
+
+Operating Conditions: ss0p75v125c   Library: saed32hvt_ss0p75v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: baud_gen_unit/r_reg_reg[7]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: baud_gen_unit/r_reg_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  uart               35000                 saed32hvt_ss0p75v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  baud_gen_unit/r_reg_reg[7]/CLK (DFFARX1_HVT)            0.00       0.00 r
+  baud_gen_unit/r_reg_reg[7]/Q (DFFARX1_HVT)              2.18       2.18 f
+  U355/Y (XOR2X2_HVT)                                     1.47       3.65 r
+  U293/Y (AND2X1_LVT)                                    -0.06       3.60 r
+  baud_gen_unit/r_reg_reg[7]/D (DFFARX1_HVT)              0.00       3.60 r
+  data arrival time                                                  3.60
+
+  clock clk (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  baud_gen_unit/r_reg_reg[7]/CLK (DFFARX1_HVT)            0.00       5.00 r
+  library setup time                                     -1.28       3.72
+  data required time                                                 3.72
+  --------------------------------------------------------------------------
+  data required time                                                 3.72
+  data arrival time                                                 -3.60
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.12
+
+
+1

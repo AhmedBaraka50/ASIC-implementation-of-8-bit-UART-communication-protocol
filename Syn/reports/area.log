@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : uart
+Version: O-2018.06-SP1
+Date   : Tue Nov 28 17:23:06 2023
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p75v125c (File: /home/ICer/saed32nm_lib/ref/DBs/saed32hvt_ss0p75v125c.db)
+    saed32lvt_ff1p16vn40c (File: /home/ICer/saed32nm_lib/ref/DBs/saed32lvt_ff1p16vn40c.db)
+
+Number of ports:                           88
+Number of nets:                           505
+Number of cells:                          414
+Number of combinational cells:            262
+Number of sequential cells:               136
+Number of macros/black boxes:               0
+Number of buf/inv:                         29
+Number of references:                      55
+
+Combinational area:                586.818503
+Buf/Inv area:                       38.629888
+Noncombinational area:             909.835543
+Macro/Black Box area:                0.000000
+Net Interconnect area:             304.831961
+
+Total cell area:                  1496.654046
+Total area:                       1801.486007
+1
